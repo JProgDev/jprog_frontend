@@ -1,0 +1,14 @@
+.card {
+  padding: 2.5rem;
+  align-items: unset;
+  background-color: white;
+  border: 0.5em;
+  color: black;
+  height: 100%;
+  transition: 500ms;
+
+  &:hover {
+    background-color: white;
+    transform: scale(1.06);
+  }
+}

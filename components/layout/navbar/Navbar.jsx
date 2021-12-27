@@ -33,7 +33,7 @@ const Navbar = () => {
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <IconButton sx={{ mr: 2, display: { xs: "none", md: "flex" } }}>
-            <Link href="#" passHref>
+            <Link href="/#" passHref>
               <Image
                 width={100}
                 height={50}
@@ -82,7 +82,7 @@ const Navbar = () => {
             </Menu>
           </Box>
           <IconButton sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <Link href="#" passHref>
+            <Link href="/#" passHref>
               <Image
                 width={100}
                 height={50}

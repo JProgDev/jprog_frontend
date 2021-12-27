@@ -24,6 +24,14 @@ a {
   box-sizing: border-box;
 }
 
+main {
+  padding-top: var(--navbar-height);
+}
+
+#main {
+  margin-top: calc(-1 * var(--navbar-height));
+}
+
 [class*="Mui"] {
   letter-spacing: unset;
   font-size: unset;

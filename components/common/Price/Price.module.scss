@@ -1,0 +1,25 @@
+.title {
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.price {
+  font-size: 2.5rem;
+  color: red;
+}
+
+.features {
+  list-style: none;
+  text-align: left;
+  padding-left: .5rem;
+  & li::before {
+    content: "~";
+  }
+}
+
+.default {
+  font-size: 1.6rem;
+  text-transform: none;
+  font-weight: unset;
+  line-height: unset;
+}
