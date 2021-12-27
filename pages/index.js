@@ -5,6 +5,7 @@ import Carousel from "../components/landing/Carousel";
 import Service from "../components/common/Service";
 
 import { services } from "./api/service";
+import Partner from "../components/landing/Partner";
 
 export default function Home() {
   return (
@@ -58,11 +59,12 @@ export default function Home() {
             </Grid>
           </Container>
         </section>
-        <section id="partners">
-          <Container>
-            
+        <section id="partners" className="mb-5">
+          <Container maxWidth="lg">
+            <Typography className="title text-center mb-3">HAMKORLARIMIZ</Typography>
+            <Partner companyName={"OBSESS"} description={"Marketing Agency"} />
           </Container>
-          </section> 
+        </section>
       </main>
     </div>
   );

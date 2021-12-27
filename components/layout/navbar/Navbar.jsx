@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 // import MenuIcon from "@mui/icons-material/Menu";
 
-import { pages } from "./Navbar.data";
+import { links, pages } from "./Navbar.data";
 import classNames from "./Navbar.module.scss";
 
 const Navbar = () => {
@@ -72,10 +72,12 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+              {links.map((link, index) => (
+                <Link href={link.href || ""} passHref key={link.name || index}>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{link.name}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -93,14 +95,19 @@ const Navbar = () => {
             className={`${classNames["navbar-menu"]} test`}
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ mx: 2, color: "black", display: "block" }}
+            {links.map((link, index) => (
+              <Link
+                href={link.href || ""}
+                key={link.name || index}
+                passHref={link.passHref}
               >
-                {page}
-              </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ mx: 2, color: "black", display: "block" }}
+                >
+                  {link.name}
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
