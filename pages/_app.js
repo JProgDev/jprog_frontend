@@ -1,11 +1,15 @@
-import Navbar from "../components/layout/navbar/Navbar";
+import Footer from "../components/layout/Footer";
+import Navbar from "../components/layout/Navbar";
 import "../styles/index.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Navbar />
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
+      <Footer />
     </div>
   );
 }

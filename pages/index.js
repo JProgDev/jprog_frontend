@@ -1,4 +1,10 @@
 import Head from "next/head";
+import { Container, Grid, Stack, Typography } from "@mui/material";
+
+import Carousel from "../components/landing/Carousel";
+import Service from "../components/common/Service";
+
+import { services } from "./api/service";
 
 export default function Home() {
   return (
@@ -9,7 +15,55 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <main>
+        <section id="carousel">
+          <Container maxWidth="lg">
+            <Carousel />
+          </Container>
+        </section>
+        <section id="services" className="mb-3">
+          <Container maxWidth="lg">
+            <Typography className="title text-center mb-3">
+              HIZMATLARIMIZ
+            </Typography>
+            <Typography className="sub-title text-center mb-3">
+              Kichik va o`rta hajmdagi saytlar
+            </Typography>
+            <Grid container className="mb-5" direction="row" spacing={3}>
+              {services.small.map((service, index) => (
+                <Grid item md={4} key={index}>
+                  <Service {...service} />
+                </Grid>
+              ))}
+            </Grid>
+            <Typography className="sub-title text-center mb-3">
+              Katta hajmdagi saytlar
+            </Typography>
+            <Grid container className="mb-5" direction="row" spacing={3}>
+              {services.big.map((service, index) => (
+                <Grid item md={4} key={index}>
+                  <Service {...service} />
+                </Grid>
+              ))}
+            </Grid>
+            <Typography className="sub-title text-center mb-3">
+              Qo`shimcha hizmatlar
+            </Typography>
+            <Grid container className="mb-5" direction="row" spacing={3}>
+              {services.additional.map((service, index) => (
+                <Grid item md={4} key={index}>
+                  <Service {...service} />
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </section>
+        <section id="partners">
+          <Container>
+            
+          </Container>
+          </section> 
+      </main>
     </div>
   );
 }

@@ -1,4 +1,6 @@
-import * as React from "react";
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {
   Menu,
   Typography,
@@ -14,10 +16,9 @@ import {
 
 import { pages } from "./Navbar.data";
 import classNames from "./Navbar.module.scss";
-import Image from "next/image";
 
 const Navbar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -28,22 +29,19 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" className={classNames.navbar}>
+    <AppBar position="fixed" className={classNames.navbar}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-          >
-            <Image
-              width={100}
-              height={50}
-              src={"/images/logo.svg"}
-              alt="JProg logo"
-            />
-          </Typography>
+          <IconButton sx={{ mr: 2, display: { xs: "none", md: "flex" } }}>
+            <Link href="#" passHref>
+              <Image
+                width={100}
+                height={50}
+                src={"/images/logo.svg"}
+                alt="JProg logo"
+              />
+            </Link>
+          </IconButton>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -81,14 +79,16 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-          >
-            LOGO
-          </Typography>
+          <IconButton sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Link href="#" passHref>
+              <Image
+                width={100}
+                height={50}
+                src={"/images/logo.svg"}
+                alt="JProg logo"
+              />
+            </Link>
+          </IconButton>
           <Box
             className={`${classNames["navbar-menu"]} test`}
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
@@ -108,4 +108,5 @@ const Navbar = () => {
     </AppBar>
   );
 };
-export default Navbar;
+
+export { Navbar };
