@@ -86,8 +86,6 @@ export const services = {
       description: "Telegram platformasida shaxsiy botingizga ega bo`ling",
       outsource: true,
       id: "7",
-      price: 1000,
-      features: ["~ Sahifa dizayni (andoza asosida)"],
     },
     {
       imgUrl: "/images/services/google.png",
@@ -116,6 +114,8 @@ export const services = {
       description: "Telegram platformasida shaxsiy botingizga ega bo`ling",
       outsource: false,
       id: "11",
+      price: 1000,
+      features: ["Sahifa dizayni (andoza asosida)"],
     },
   ],
 };

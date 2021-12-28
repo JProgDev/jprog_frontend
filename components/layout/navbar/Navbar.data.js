@@ -17,7 +17,7 @@ const links = [
   },
   {
     name: "Aloqa",
-    href: "/form",
+    href: "/contact",
     passHref: false,
   },
 ];

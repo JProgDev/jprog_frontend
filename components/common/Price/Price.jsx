@@ -15,13 +15,15 @@ export const Price = ({ imgUrl, id, title, price, features }) => {
           </div>
           <Typography className={classNames.title}>{title}</Typography>
           <Typography className={classNames.price}>{price}</Typography>
+          <Typography className={classNames.default}>dan boshlab</Typography>
           <hr />
           <ul className={classNames.features}>
-            {features.map((feature, index) => (
-              <li key={index} className={classNames.default}>
-                {feature}
-              </li>
-            ))}
+            {features &&
+              features.map((feature, index) => (
+                <li key={index} className={classNames.default}>
+                  {feature}
+                </li>
+              ))}
           </ul>
         </a>
       </Link>
