@@ -14,15 +14,13 @@ const index = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <section id="prices">
-          <Container maxWidth="lg">
-            {services.small.map((service, index) => (
-              <Price key={index} {...service} />
-            ))}
-          </Container>
-        </section>
-      </main>
+      <section id="prices">
+        <Container maxWidth="lg">
+          {services.small.map((service, index) => (
+            <Price key={index} {...service} />
+          ))}
+        </Container>
+      </section>
     </div>
   );
 };

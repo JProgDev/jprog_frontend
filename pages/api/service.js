@@ -66,7 +66,7 @@ export const services = {
       outsource: false,
       id: "5",
       price: 1000,
-      features: ["~ Sahifa dizayni (andoza asosida)"],
+      features: ["Sahifa dizayni (andoza asosida)"],
     },
     {
       imgUrl: "/images/services/market.png",
@@ -76,7 +76,7 @@ export const services = {
       outsource: false,
       id: "6",
       price: 1000,
-      features: ["~ Sahifa dizayni (andoza asosida)"],
+      features: ["Sahifa dizayni (andoza asosida)"],
     },
   ],
   additional: [

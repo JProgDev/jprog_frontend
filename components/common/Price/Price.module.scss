@@ -15,6 +15,7 @@
   padding-left: .5rem;
   & li::before {
     content: "~";
+    margin-right: .5rem;
   }
 }
 
