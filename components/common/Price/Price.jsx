@@ -8,7 +8,7 @@ import classNames from "./Price.module.scss";
 export const Price = ({ imgUrl, id, title, price, features }) => {
   return (
     <Card>
-      <Link href={`/price/${id}`}>
+      <Link href={`/prices/${id}`}>
         <a>
           <div>
             <Avatar imgUrl={imgUrl} alt={title} />

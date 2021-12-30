@@ -7,7 +7,7 @@ import Service from "../components/common/Service";
 import { services } from "./api/service";
 import Partner from "../components/landing/Partner";
 
-export default function Home() {
+export default function Home({ services }) {
   return (
     <div>
       <Head>
@@ -71,4 +71,12 @@ export default function Home() {
       </section>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      services,
+    },
+  };
 }

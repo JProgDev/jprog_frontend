@@ -2,13 +2,9 @@ import { Box, Container, Grid, MenuItem, TextField } from "@mui/material";
 import { services } from "../api/service";
 import Button from "../../components/common/Button";
 
-const servicesLabels = [
-  ...services.small.map((service) => service.title),
-  ...services.big.map((service) => service.title),
-];
-const index = () => {
+const Contact = ({ servicesLabels }) => {
   return (
-    <div>
+    <div className="pt-2">
       <Container maxWidth="lg">
         <Box
           component="form"
@@ -57,4 +53,16 @@ const index = () => {
   );
 };
 
-export default index;
+export async function getStaticProps() {
+  const servicesLabels = [
+    ...services.small.map((service) => service.title),
+    ...services.big.map((service) => service.title),
+  ];
+  return {
+    props: {
+      servicesLabels,
+    },
+  };
+}
+
+export default Contact;

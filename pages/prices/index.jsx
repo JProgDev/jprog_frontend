@@ -2,13 +2,8 @@ import { Container, Grid, Typography } from "@mui/material";
 import Head from "next/head";
 import { services } from "../api/service";
 import Price from "../../components/common/Price";
-import { useMemo } from "react";
 
-const additionalInsideServices = services.additional.filter(
-  (service) => !service.outsource
-);
-
-const index = () => {
+const Prices = ({ services, additionalInsideServices }) => {
   return (
     <div>
       <Head>
@@ -57,4 +52,16 @@ const index = () => {
   );
 };
 
-export default index;
+export async function getStaticProps() {
+  const additionalInsideServices = services.additional.filter(
+    (service) => !service.outsource
+  );
+
+  return {
+    props: {
+      services,
+      additionalInsideServices,
+    },
+  };
+}
+export default Prices;
