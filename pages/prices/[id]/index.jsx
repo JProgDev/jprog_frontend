@@ -5,7 +5,7 @@ import { services } from "../../api/service";
 import Price from "../../../components/common/Price";
 import Button from "../../../components/common/Button";
 
-const PriceDetails = ({ service }) => {
+const PriceDetailsPage = ({ service }) => {
   return (
     <div>
       <Head>
@@ -99,4 +99,4 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default PriceDetails;
+export default PriceDetailsPage;

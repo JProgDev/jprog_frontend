@@ -2,7 +2,7 @@ import { Box, Container, Grid, MenuItem, TextField } from "@mui/material";
 import { services } from "../api/service";
 import Button from "../../components/common/Button";
 
-const Contact = ({ servicesLabels }) => {
+const ContactsPage = ({ servicesLabels }) => {
   return (
     <div className="pt-2">
       <Container maxWidth="lg">
@@ -65,4 +65,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Contact;
+export default ContactsPage;

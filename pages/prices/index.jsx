@@ -3,7 +3,7 @@ import Head from "next/head";
 import { services } from "../api/service";
 import Price from "../../components/common/Price";
 
-const Prices = ({ services, additionalInsideServices }) => {
+const PricesPage = ({ services, additionalInsideServices }) => {
   return (
     <div>
       <Head>
@@ -64,4 +64,4 @@ export async function getStaticProps() {
     },
   };
 }
-export default Prices;
+export default PricesPage;
