@@ -56,7 +56,7 @@ export default function HomePage({ services, advantages }) {
               </Grid>
             ))}
           </Grid>
-          <Typography className="sub-title text-center mb-3">
+          <Typography id="big_services" className="sub-title text-center mb-3">
             <span className="text-underlined">Katta hajmdagi saytlar</span>
           </Typography>
           <Grid container className="mb-5" direction="row" spacing={3}>
@@ -66,7 +66,7 @@ export default function HomePage({ services, advantages }) {
               </Grid>
             ))}
           </Grid>
-          <Typography className="sub-title text-center mb-3">
+          <Typography id="additional_services" className="sub-title text-center mb-3">
             <span className="text-underlined">Qo`shimcha hizmatlar</span>
           </Typography>
           <Grid container className="mb-5" direction="row" spacing={3}>

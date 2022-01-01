@@ -15,8 +15,12 @@ export const Price = ({ imgUrl, id, title, price, features }) => {
           </div>
           <Typography className={classNames.title}>{title}</Typography>
           <Typography className={classNames.price}>{price}</Typography>
-          <Typography className={classNames.default}>dan boshlab</Typography>
-          <hr />
+          <Typography
+            className={`${classNames.default} ${classNames["border-bottom"]}`}
+          >
+            dan boshlab
+          </Typography>
+          <div className={classNames.line}></div>
           <ul className={classNames.features}>
             {features &&
               features.map((feature, index) => (

@@ -26,7 +26,8 @@ const PriceDetailsPage = ({ service }) => {
                 component="form"
                 sx={{
                   backgroundColor: "#ffff",
-                  p: 2,
+                  mx: 2,
+                  p: 1,
                   borderRadius: "1rem",
                   "& .MuiTextField-root": { my: 1, width: "100%" },
                   "& .MuiGrid-item": { p: 1 },
@@ -69,7 +70,7 @@ export async function getStaticPaths() {
   const bigSitesPaths = services.big.map((service) => ({
     params: { id: service.id },
   }));
-  const additionalSitesPaths = services.big
+  const additionalSitesPaths = services.additional
     .filter((service) => !service.outsource)
     .map((service) => ({
       params: { id: service.id },

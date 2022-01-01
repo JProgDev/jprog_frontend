@@ -5,7 +5,12 @@
   border: 0.5em;
   color: black;
   height: 100%;
+  width: 100%;
   transition: 500ms;
+
+  & a {
+    width: 100%;
+  }
 
   &:hover {
     background-color: white;

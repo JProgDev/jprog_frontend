@@ -12,10 +12,10 @@
 .features {
   list-style: none;
   text-align: left;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
   & li::before {
     content: "~";
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -24,4 +24,11 @@
   text-transform: none;
   font-weight: unset;
   line-height: unset;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  margin: .4rem auto;
+  background-color: black;
 }

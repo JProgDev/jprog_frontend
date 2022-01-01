@@ -1,7 +1,7 @@
 const carouselConfig = {
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
   speed: 2500,
   autoplaySpeed: 2500,
 };

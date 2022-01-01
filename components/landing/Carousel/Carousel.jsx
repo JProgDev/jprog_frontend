@@ -9,6 +9,7 @@ import Button from "../../common/Button";
 import classNames from "./Carousel.module.scss";
 import { carouselConfig } from "./Carousel.data";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Carousel = () => {
   return (
@@ -24,7 +25,11 @@ export const Carousel = () => {
           <Typography variant="h1" className="title" sx={{ mb: 3 }}>
             Internet tarmog`ida shaxsiy sahifangizga ega bo`ling
           </Typography>
-          <Button variant="contained">Buyurtma berish</Button>
+          <Button variant="contained">
+            <Link href="/#services" passHref>
+              Buyurtma berish
+            </Link>
+          </Button>
         </div>
         <div className="content-center">
           <Image
@@ -45,7 +50,11 @@ export const Carousel = () => {
           <Typography variant="h1" className="title" sx={{ mb: 3 }}>
             Biznesingiz jarayonini avtomatlashtiring
           </Typography>
-          <Button variant="contained">Buyurtma berish</Button>
+          <Button variant="contained">
+            <Link href="/#big_services" passHref>
+              Buyurtma berish
+            </Link>
+          </Button>
         </div>
         <div className="content-center">
           <Image
@@ -65,9 +74,12 @@ export const Carousel = () => {
         <div className={classNames.content}>
           <Typography variant="h1" className="title" sx={{ mb: 3 }}>
             Marketing roqali biznesingizni yangi bosqichaga olib chiqing
-            Buyurtma berish
           </Typography>
-          <Button variant="contained">Buyurtma berish</Button>
+          <Button variant="contained">
+            <Link href="/#additional_services" passHref>
+              Buyurtma berish
+            </Link>
+          </Button>
         </div>
         <div className="content-center">
           <Image
