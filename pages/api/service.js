@@ -1,7 +1,7 @@
 export const services = {
   small: [
     {
-      imgUrl: "/images/services/landing.png",
+      imgUrl: "/images/services/monitor.svg",
       title: "Landing sahifa",
       description:
         "Biznesingizni dunyoga tanitish uchun landing sahifa yarating",
@@ -9,30 +9,30 @@ export const services = {
       id: "1",
       price: 1000,
       features: [
-        "Sahifa dizayni (andoza asosida)",
+        "Sahifa dizayni",
         "Statik sahifa",
-        "Qayta aloqa formasi",
+        "Adaptiv sayt",
         "5 va undan ortiq bo`limlar",
         "Ijtimoiy tarmoqlarga linklar",
       ],
     },
     {
-      imgUrl: "/images/services/catalog.png",
+      imgUrl: "/images/services/catalog.svg",
       title: "Sayt Katalog",
       description: "Mijozlarga hizmatlar taklifini internetda yarating",
       outsource: false,
       id: "2",
       price: 1000,
       features: [
-        "Sayt dizayni (andoza asosida)",
+        "Sayt dizayni",
         "5 va undan ortiq sahifalar",
+        "Adaptiv dizayn",
         "Dinamik sahifalar",
-        "Qayta aloqa formasi",
         "Admin panel",
       ],
     },
     {
-      imgUrl: "/images/services/vizitka.png",
+      imgUrl: "/images/services/vizitka.svg",
       title: "Sayt Vizitka",
       description:
         "Mahsulotlar sotuv tizimlarini avtomatlashtirish uchun internet do`konlar yarating",
@@ -40,36 +40,35 @@ export const services = {
       id: "3",
       price: 1000,
       features: [
-        "Sayt dizayni (andoza asosida)",
+        "Sayt dizayni",
         "3 va undan ortiq sahifalar",
         "Dinamik sahifalar",
-        "Qayta aloqa formasi",
         "Admin panel",
       ],
     },
   ],
   big: [
     {
-      imgUrl: "/images/services/cms.png",
+      imgUrl: "/images/services/cms.svg",
       title: "CMS (Mijozlarni boshqarish tizimi)",
       description:
-        "CMS orqali mijozlaringiz bilan yanada samarali a’loqa qiling",
+        "CMS orqali mijozlaringiz bilan yanada samarali aloqa qiling",
       outsource: false,
       id: "4",
       price: 1000,
-      features: ["Sahifa dizayni (andoza asosida)", "Dinamik sahifalar"],
+      features: ["Sahifa dizayni", "Dinamik sahifalar", "Adaptiv sayt"],
     },
     {
-      imgUrl: "/images/services/corporate.png",
+      imgUrl: "/images/services/corporate.svg",
       title: "Korporativ Sayt",
       description: "O`z biznesingizni avtomatlashtirish uchun yana bir qadam",
       outsource: false,
       id: "5",
       price: 1000,
-      features: ["Sahifa dizayni (andoza asosida)"],
+      features: ["Sahifa dizayni"],
     },
     {
-      imgUrl: "/images/services/market.png",
+      imgUrl: "/images/services/market.svg",
       title: "Internet Do`kon",
       description:
         "Mahsulotlar sotuv tizimini avtomatlashtirish uchun internet do`konlar yarating",
@@ -81,7 +80,7 @@ export const services = {
   ],
   additional: [
     {
-      imgUrl: "/images/services/design.png",
+      imgUrl: "/images/services/design.svg",
       title: "Logo & Brend dizayn",
       description: "Telegram platformasida shaxsiy botingizga ega bo`ling",
       outsource: true,
@@ -95,7 +94,7 @@ export const services = {
       id: "8",
     },
     {
-      imgUrl: "/images/services/copywriting.png",
+      imgUrl: "/images/services/copywriting.svg",
       title: "Kopyrayting",
       description: "Mahsulotlaringiz uchun sotuvchi matnlar tuzish",
       outsource: true,
@@ -109,7 +108,7 @@ export const services = {
       id: "10",
     },
     {
-      imgUrl: "/images/services/bot.png",
+      imgUrl: "/images/services/bot.svg",
       title: "Telegram Bot",
       description: "Telegram platformasida shaxsiy botingizga ega bo`ling",
       outsource: false,

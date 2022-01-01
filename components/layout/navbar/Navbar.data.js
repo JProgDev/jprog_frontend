@@ -1,4 +1,3 @@
-const pages = ["Hizmatlarimiz", "Biz haqimizda", "Narxlar", "Aloqa"];
 const links = [
   {
     name: "Hizmatlarimiz",
@@ -22,4 +21,4 @@ const links = [
   },
 ];
 
-export { pages, links };
+export { links };

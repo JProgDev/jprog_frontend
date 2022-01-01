@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 
 export const Advantage = ({ iconUrl, title, description, offset = 0 }) => {
-  console.log("🚀 ~ file: Advantage.jsx ~ line 6 ~ Advantage ~ offset", offset);
   return (
     <Grid container className="mb-2">
       {offset > 0 && <Grid item xs={offset} />}

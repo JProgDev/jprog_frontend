@@ -19,7 +19,6 @@ export default function HomePage({ services, advantages }) {
           name="description"
           content="Create your own website for your own business"
         />
-        <link rel="icon" href="/images/logo.svg" />
       </Head>
 
       <section id="main">
@@ -30,8 +29,8 @@ export default function HomePage({ services, advantages }) {
 
       <section id="why_we" className="mb-5">
         <Container maxWidth="lg">
-          <Typography className="text-uppercase underlined position-relative text-center mb-3">
-            <span className="title">nima uchun biz</span>
+          <Typography className="text-uppercase position-relative text-center mb-3">
+            <span className="title text-underlined">nima uchun biz</span>
             <span className="text-shadowed">avfzalliklar</span>
           </Typography>
           {advantages.map((advantage, index) => (

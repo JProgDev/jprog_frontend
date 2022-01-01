@@ -14,7 +14,6 @@ const PriceDetailsPage = ({ service }) => {
           name="description"
           content="JProg IT & Design Company Prices List"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <section id="prices" className="pt-2">
         <Container maxWidth="lg">
