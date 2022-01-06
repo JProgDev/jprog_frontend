@@ -11,6 +11,7 @@ import Partner from "../components/landing/Partner";
 import { Advantage } from "../components/landing/Advantage/Advantage";
 
 export default function HomePage({ services, advantages }) {
+  console.log("🚀 ~ file: index.jsx ~ line 14 ~ HomePage ~ services", services);
   return (
     <div>
       <Head>
@@ -51,7 +52,7 @@ export default function HomePage({ services, advantages }) {
           </Typography>
           <Grid container className="mb-5" direction="row" spacing={3}>
             {services.small.map((service, index) => (
-              <Grid item md={4} key={index}>
+              <Grid item md={3} key={index}>
                 <Service {...service} />
               </Grid>
             ))}
@@ -61,17 +62,20 @@ export default function HomePage({ services, advantages }) {
           </Typography>
           <Grid container className="mb-5" direction="row" spacing={3}>
             {services.big.map((service, index) => (
-              <Grid item md={4} key={index}>
+              <Grid item md={3} key={index}>
                 <Service {...service} />
               </Grid>
             ))}
           </Grid>
-          <Typography id="additional_services" className="sub-title text-center mb-3">
+          <Typography
+            id="additional_services"
+            className="sub-title text-center mb-3"
+          >
             <span className="text-underlined">Qo`shimcha hizmatlar</span>
           </Typography>
           <Grid container className="mb-5" direction="row" spacing={3}>
             {services.additional.map((service, index) => (
-              <Grid item md={4} key={index}>
+              <Grid item md={3} key={index}>
                 <Service {...service} />
               </Grid>
             ))}

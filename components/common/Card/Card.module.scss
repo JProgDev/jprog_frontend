@@ -1,5 +1,7 @@
+$animation-duration: 2s;
+
 .card {
-  padding: 2.5rem;
+  padding: 2.5rem 1.5rem;
   align-items: unset;
   background-color: white;
   border: 0.5em;
@@ -15,5 +17,80 @@
   &:hover {
     background-color: white;
     transform: scale(1.06);
+  }
+}
+
+.active {
+  position: relative;
+  transform: scale(1.06);
+  border-radius: unset;
+
+  .border-line {
+    position: absolute;
+    inset: 0;
+    display: block;
+    box-sizing: border-box;
+    z-index: 100000;
+    &::before {
+      content: " ";
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      position: absolute;
+      background: var(--jprog-skyblue);
+      width: 100%;
+      height: 2px;
+      animation: x-line-animate $animation-duration linear infinite;
+    }
+  }
+
+  .border-line:nth-child(odd)::before {
+    width: 2px;
+    height: 100%;
+    animation: y-line-animate $animation-duration linear infinite;
+  }
+  .border-line:nth-child(3),
+  .border-line:nth-child(4) {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes x-line-animate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@keyframes y-line-animate {
+  0% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  50.1% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: top;
   }
 }

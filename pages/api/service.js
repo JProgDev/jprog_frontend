@@ -1,3 +1,8 @@
+// landing vizitka catalog blog
+// cms eCommerce corporate service
+
+let id = 0;
+
 export const services = {
   small: [
     {
@@ -6,7 +11,7 @@ export const services = {
       description:
         "Biznesingizni dunyoga tanitish uchun landing sahifa yarating",
       outsource: false,
-      id: "1",
+      id: String(++id),
       price: 1000,
       features: [
         "Sahifa dizayni",
@@ -21,7 +26,7 @@ export const services = {
       title: "Sayt Katalog",
       description: "Mijozlarga hizmatlar taklifini internetda yarating",
       outsource: false,
-      id: "2",
+      id: String(++id),
       price: 1000,
       features: [
         "Sayt dizayni",
@@ -37,7 +42,22 @@ export const services = {
       description:
         "Mahsulotlar sotuv tizimlarini avtomatlashtirish uchun internet do`konlar yarating",
       outsource: false,
-      id: "3",
+      id: String(++id),
+      price: 1000,
+      features: [
+        "Sayt dizayni",
+        "3 va undan ortiq sahifalar",
+        "Dinamik sahifalar",
+        "Admin panel",
+      ],
+    },
+    {
+      imgUrl: "/images/services/vizitka.svg",
+      title: "Internet Blog",
+      description:
+        "Mahsulotlar sotuv tizimlarini avtomatlashtirish uchun internet do`konlar yarating",
+      outsource: false,
+      id: String(++id),
       price: 1000,
       features: [
         "Sayt dizayni",
@@ -54,18 +74,9 @@ export const services = {
       description:
         "CMS orqali mijozlaringiz bilan yanada samarali aloqa qiling",
       outsource: false,
-      id: "4",
+      id: String(++id),
       price: 1000,
       features: ["Sahifa dizayni", "Dinamik sahifalar", "Adaptiv sayt"],
-    },
-    {
-      imgUrl: "/images/services/corporate.svg",
-      title: "Korporativ Sayt",
-      description: "O`z biznesingizni avtomatlashtirish uchun yana bir qadam",
-      outsource: false,
-      id: "5",
-      price: 1000,
-      features: ["Sahifa dizayni"],
     },
     {
       imgUrl: "/images/services/market.svg",
@@ -73,9 +84,27 @@ export const services = {
       description:
         "Mahsulotlar sotuv tizimini avtomatlashtirish uchun internet do`konlar yarating",
       outsource: false,
-      id: "6",
+      id: String(++id),
       price: 1000,
       features: ["Sahifa dizayni (andoza asosida)"],
+    },
+    {
+      imgUrl: "/images/services/corporate.svg",
+      title: "Korporativ Sayt",
+      description: "O`z biznesingizni avtomatlashtirish uchun yana bir qadam",
+      outsource: false,
+      id: String(++id),
+      price: 1000,
+      features: ["Sahifa dizayni"],
+    },
+    {
+      imgUrl: "/images/services/corporate.svg",
+      title: "Start Up Sayt",
+      description: "O`z biznesingizni avtomatlashtirish uchun yana bir qadam",
+      outsource: false,
+      id: String(++id),
+      price: 1000,
+      features: ["Sahifa dizayni"],
     },
   ],
   additional: [
@@ -84,35 +113,35 @@ export const services = {
       title: "Logo & Brend dizayn",
       description: "Telegram platformasida shaxsiy botingizga ega bo`ling",
       outsource: true,
-      id: "7",
+      id: String(++id),
     },
     {
       imgUrl: "/images/services/google.png",
       title: "Kontekst Reklamma",
       description: "Google va Yandex orqali o`z biznesingizni reklamma qiling",
       outsource: true,
-      id: "8",
+      id: String(++id),
     },
     {
       imgUrl: "/images/services/copywriting.svg",
       title: "Kopyrayting",
       description: "Mahsulotlaringiz uchun sotuvchi matnlar tuzish",
       outsource: true,
-      id: "9",
+      id: String(++id),
     },
     {
       imgUrl: "/images/services/smm.png",
       title: "SMM",
       description: "Biznesingiz dizaynini biz bilan shakllantiring",
       outsource: true,
-      id: "10",
+      id: String(++id),
     },
     {
       imgUrl: "/images/services/bot.svg",
       title: "Telegram Bot",
       description: "Telegram platformasida shaxsiy botingizga ega bo`ling",
       outsource: false,
-      id: "11",
+      id: String(++id),
       price: 1000,
       features: ["Sahifa dizayni (andoza asosida)"],
     },
