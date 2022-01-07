@@ -55,9 +55,7 @@ $nav-item-width: 2px;
       transform: translate(-50%, 100%);
       padding-top: 2rem;
       opacity: 1;
-      display: block;
       pointer-events: visible;
-      transition-delay: 0s;
     }
   }
 }
@@ -68,7 +66,6 @@ $nav-item-width: 2px;
   opacity: 0;
   bottom: 0;
   left: 50%;
-  transition-delay: 1s;
   transform: translate(-50%, 130%);
   transition: all 200ms ease-in-out;
   background-color: transparent;
