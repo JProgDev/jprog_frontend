@@ -99,7 +99,7 @@ const Navbar = () => {
               <Link
                 href={link.href || ""}
                 key={link.name || index}
-                passHref={link.passHref}
+                passHref={link.passHref || false}
               >
                 <Button
                   onClick={handleCloseNavMenu}
