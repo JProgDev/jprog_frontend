@@ -21,7 +21,7 @@ const PricesPage = ({ services, additionalInsideServices }) => {
           <Grid container className="mb-5" direction="row" spacing={3}>
             {services.small.map((service, index) => (
               <Grid item md={3} key={index}>
-                <Price active={index == 1} key={index} {...service} />
+                <Price hoverable active={index == 1} key={index} {...service} />
               </Grid>
             ))}
           </Grid>
@@ -31,7 +31,7 @@ const PricesPage = ({ services, additionalInsideServices }) => {
           <Grid container className="mb-5" direction="row" spacing={3}>
             {services.big.map((service, index) => (
               <Grid item md={3} key={index}>
-                <Price active={index == 1} key={index} {...service} />
+                <Price hoverable active={index == 1} {...service} />
               </Grid>
             ))}
           </Grid>
@@ -41,7 +41,7 @@ const PricesPage = ({ services, additionalInsideServices }) => {
           <Grid container className="mb-5" direction="row" spacing={3}>
             {additionalInsideServices.map((service, index) => (
               <Grid item md={3} key={index}>
-                <Price active={index == 1} key={index} {...service} />
+                <Price hoverable active={index == 1} key={index} {...service} />
               </Grid>
             ))}
           </Grid>

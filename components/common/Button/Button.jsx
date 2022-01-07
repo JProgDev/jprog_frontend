@@ -1,5 +1,9 @@
 import { Button as MuiButton } from "@mui/material";
 
-export const Button = ({ children }) => {
-  return <MuiButton variant="contained">{children}</MuiButton>;
+export const Button = ({ children, className, variant = "contained" }) => {
+  return (
+    <MuiButton variant={variant} className={className}>
+      {children}
+    </MuiButton>
+  );
 };

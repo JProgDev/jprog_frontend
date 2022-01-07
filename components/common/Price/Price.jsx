@@ -5,16 +5,9 @@ import Card from "../Card";
 
 import classNames from "./Price.module.scss";
 
-export const Price = ({
-  imgUrl,
-  id,
-  title,
-  price,
-  features,
-  active = false,
-}) => {
+export const Price = ({ imgUrl, id, title, price, features, ...props }) => {
   return (
-    <Card active={active} href={`/prices/${id}`}>
+    <Card href={`/prices/${id}`} {...props}>
       <div>
         <Avatar imgUrl={imgUrl} alt={title} />
       </div>

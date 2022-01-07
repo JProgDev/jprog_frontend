@@ -11,7 +11,6 @@ import Partner from "../components/landing/Partner";
 import { Advantage } from "../components/landing/Advantage/Advantage";
 
 export default function HomePage({ services, advantages }) {
-  console.log("🚀 ~ file: index.jsx ~ line 14 ~ HomePage ~ services", services);
   return (
     <div>
       <Head>
@@ -53,7 +52,7 @@ export default function HomePage({ services, advantages }) {
           <Grid container className="mb-5" direction="row" spacing={3}>
             {services.small.map((service, index) => (
               <Grid item md={3} key={index}>
-                <Service {...service} />
+                <Service hoverable {...service} />
               </Grid>
             ))}
           </Grid>

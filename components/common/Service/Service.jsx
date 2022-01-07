@@ -5,9 +5,9 @@ import Card from "../Card";
 
 import classNames from "./Service.module.scss";
 
-export const Service = ({ imgUrl, title, description, id, active }) => {
+export const Service = ({ imgUrl, title, description, id, ...props }) => {
   return (
-    <Card active={active} href={`/prices/${id}`}>
+    <Card href={`/prices/${id}`} {...props}>
       <Avatar imgUrl={imgUrl} alt={title} />
       <Typography className={classNames.title}>{title}</Typography>
       <p className={classNames.default}>{description}</p>
