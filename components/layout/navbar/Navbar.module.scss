@@ -1,5 +1,3 @@
-$nav-item-width: 2px;
-
 .navbar {
   background-color: #ffff;
   color: #000000;
@@ -8,58 +6,5 @@ $nav-item-width: 2px;
 
   .navbar-menu {
     justify-content: end;
-
-    .nav-item {
-      position: relative;
-
-      .line {
-        position: absolute;
-        background-color: var(--jprog-skyblue);
-        transition: 300ms;
-      }
-
-      .top {
-        top: 0;
-        left: 0;
-      }
-
-      .bottom {
-        bottom: 0;
-        right: 0;
-      }
-
-      .top,
-      .bottom {
-        height: $nav-item-width;
-        width: 0;
-      }
-
-      .right {
-        top: 0;
-        right: 0;
-      }
-
-      .left {
-        bottom: 0;
-        left: 0;
-      }
-
-      .left,
-      .right {
-        height: 0;
-        width: $nav-item-width;
-      }
-
-      &:hover {
-        .bottom,
-        .top {
-          width: 100%;
-        }
-        .right,
-        .left {
-          height: 100%;
-        }
-      }
-    }
   }
 }

@@ -16,6 +16,7 @@ import {
 
 import { links } from "./Navbar.data";
 import classNames from "./Navbar.module.scss";
+import { NavItem } from "./components";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -96,23 +97,11 @@ const Navbar = () => {
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >
             {links.map((link, index) => (
-              <Link
-                href={link.href || ""}
-                key={link.name || index}
-                passHref={link.passHref || false}
-              >
-                <Button
-                  onClick={handleCloseNavMenu}
-                  sx={{ mx: 2, color: "black", display: "block" }}
-                  className={classNames["nav-item"]}
-                >
-                  <span className={`${classNames.right} ${classNames.line}`} />
-                  <span className={`${classNames.top} ${classNames.line}`} />
-                  <span className={`${classNames.left} ${classNames.line}`} />
-                  <span className={`${classNames.bottom} ${classNames.line}`} />
-                  {link.name}
-                </Button>
-              </Link>
+              <NavItem
+                key={index}
+                {...link}
+                handleCloseNavMenu={handleCloseNavMenu}
+              />
             ))}
           </Box>
         </Toolbar>
