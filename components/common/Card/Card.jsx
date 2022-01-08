@@ -1,5 +1,6 @@
 import { Button as MuiButton } from "@mui/material";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Button from "../Button";
 import classNames from "./Card.module.scss";
@@ -11,8 +12,13 @@ export const Card = ({
   active = false,
   hoverable = false,
 }) => {
+  const router = useRouter();
+
+  const RedirectForActiveItem = () => active && router.push(href);
+
   return (
     <MuiButton
+      onClick={RedirectForActiveItem}
       className={`${className} ${classNames.card} ${
         active && classNames.active
       } ${hoverable && classNames.hoverable}`}
