@@ -1,3 +1,3 @@
-export { Advantage } from "./Advantage";
+import { Advantage } from "./Advantage";
 
 export default Advantage;

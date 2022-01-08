@@ -1,15 +1,13 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Container, Grid, Typography } from "@mui/material";
 
 import Carousel from "../components/landing/Carousel";
-import Service from "../components/common/Service";
 
 import { services } from "./api/service";
 import { advantages } from "./api/advantage";
 import Partner from "../components/landing/Partner";
-import { Advantage } from "../components/landing/Advantage/Advantage";
-import { Price } from "../components/common/Price/Price";
+import Service from "../components/common/Service";
+import Advantage from "../components/landing/Advantage";
 
 export default function HomePage({ services, advantages }) {
   return (
@@ -48,7 +46,7 @@ export default function HomePage({ services, advantages }) {
           <Grid container className="mb-5" direction="row" spacing={3}>
             {services.map((service, index) => (
               <Grid item md={3} key={index}>
-                <Price hoverable active={index == 1} {...service} />
+                <Service hoverable active={index == 1} {...service} />
               </Grid>
             ))}
           </Grid>

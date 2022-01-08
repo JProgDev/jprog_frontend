@@ -2,7 +2,7 @@ import { Box, Container, Grid, MenuItem, TextField } from "@mui/material";
 import Head from "next/head";
 
 import { services } from "../../api/service";
-import Price from "../../../components/common/Price";
+import Service from "../../../components/common/Service";
 import Button from "../../../components/common/Button";
 
 const PriceDetailsPage = ({ service }) => {
@@ -19,7 +19,7 @@ const PriceDetailsPage = ({ service }) => {
         <Container maxWidth="lg">
           <Grid container>
             <Grid item md={4}>
-              <Price {...service} />
+              <Service {...service} />
             </Grid>
             <Grid item md={8}>
               <Box
