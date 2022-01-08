@@ -25,7 +25,7 @@ const ServicesPage = () => {
               Kichik va o`rta hajmdagi saytlar
             </span>
           </Typography>
-          <Grid container className="mb-5" direction="row" spacing={3}>
+          <Grid container className="mb-5" spacing={3}>
             {services.small.map((service, index) => (
               <Grid item md={3} key={index}>
                 <Service hoverable active={index == 1} {...service} />
@@ -35,7 +35,7 @@ const ServicesPage = () => {
           <Typography id="big_services" className="sub-title text-center mb-3">
             <span className="text-underlined">Katta hajmdagi saytlar</span>
           </Typography>
-          <Grid container className="mb-5" direction="row" spacing={3}>
+          <Grid container className="mb-5" spacing={3}>
             {services.big.map((service, index) => (
               <Grid item md={3} key={index}>
                 <Service hoverable active={index == 1} {...service} />
@@ -48,7 +48,7 @@ const ServicesPage = () => {
           >
             <span className="text-underlined">Qo`shimcha hizmatlar</span>
           </Typography>
-          <Grid container className="mb-5" direction="row" spacing={3}>
+          <Grid container className="mb-5" spacing={3}>
             {services.additional.map((service, index) => (
               <Grid item md={3} key={index}>
                 <Service hoverable active={index == 1} {...service} />
