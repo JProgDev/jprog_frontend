@@ -9,6 +9,7 @@ import { services } from "./api/service";
 import { advantages } from "./api/advantage";
 import Partner from "../components/landing/Partner";
 import { Advantage } from "../components/landing/Advantage/Advantage";
+import { Price } from "../components/common/Price/Price";
 
 export default function HomePage({ services, advantages }) {
   return (
@@ -44,38 +45,10 @@ export default function HomePage({ services, advantages }) {
             <span className="title text-underlined">HIZMATLARIMIZ</span>
             <span className="text-shadowed">faqat siz uchun</span>
           </Typography>
-          <Typography className="sub-title text-center mb-3">
-            <span className="text-underlined">
-              Kichik va o`rta hajmdagi saytlar
-            </span>
-          </Typography>
           <Grid container className="mb-5" direction="row" spacing={3}>
-            {services.small.map((service, index) => (
+            {services.map((service, index) => (
               <Grid item md={3} key={index}>
-                <Service hoverable {...service} />
-              </Grid>
-            ))}
-          </Grid>
-          <Typography id="big_services" className="sub-title text-center mb-3">
-            <span className="text-underlined">Katta hajmdagi saytlar</span>
-          </Typography>
-          <Grid container className="mb-5" direction="row" spacing={3}>
-            {services.big.map((service, index) => (
-              <Grid item md={3} key={index}>
-                <Service {...service} />
-              </Grid>
-            ))}
-          </Grid>
-          <Typography
-            id="additional_services"
-            className="sub-title text-center mb-3"
-          >
-            <span className="text-underlined">Qo`shimcha hizmatlar</span>
-          </Typography>
-          <Grid container className="mb-5" direction="row" spacing={3}>
-            {services.additional.map((service, index) => (
-              <Grid item md={3} key={index}>
-                <Service {...service} />
+                <Price hoverable active={index == 1} {...service} />
               </Grid>
             ))}
           </Grid>
@@ -95,9 +68,15 @@ export default function HomePage({ services, advantages }) {
 }
 
 export async function getStaticProps() {
+  const sortedServices = [
+    services.small[0],
+    services.small[1],
+    services.big[2],
+    services.small[2],
+  ];
   return {
     props: {
-      services,
+      services: sortedServices,
       advantages,
     },
   };

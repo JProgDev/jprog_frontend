@@ -4,7 +4,6 @@ import Link from "next/link";
 import classNames from "./NavItem.module.scss";
 
 export const NavItem = ({ children, ...props }) => {
-  console.log("🚀 ~ file: NavItem.jsx ~ line 7 ~ NavItem ~ children", children);
   return (
     <Link
       href={props.href || ""}
