@@ -11,6 +11,7 @@ export const Card = ({
   href,
   active = false,
   hoverable = false,
+  ...props
 }) => {
   const router = useRouter();
 
@@ -22,6 +23,7 @@ export const Card = ({
       className={`${className} ${classNames.card} ${
         active && classNames.active
       } ${hoverable && classNames.hoverable}`}
+      {...props}
     >
       {new Array(4).fill("").map((_, index) => (
         <span key={index} className={classNames["border-line"]} />

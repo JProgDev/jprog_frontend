@@ -6,7 +6,7 @@ import classNames from "./Service.module.scss";
 
 export const Service = ({ imgUrl, id, title, price, features, ...props }) => {
   return (
-    <Card href={`/prices/${id}`} {...props}>
+    <Card data-aos="zoom-in" href={`/prices/${id}`} {...props}>
       <div>
         <Avatar imgUrl={imgUrl} alt={title} />
       </div>

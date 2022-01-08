@@ -26,18 +26,23 @@ export default function HomePage({ services, advantages }) {
         </Container>
       </section>
 
-      <section id="why_we" className="mb-5">
+      <section id="why_we" className="mt-5">
         <Container maxWidth="lg">
           <Typography className="text-uppercase position-relative text-center mb-3">
             <span className="title text-underlined">nima uchun biz</span>
             <span className="text-shadowed">avfzalliklar</span>
           </Typography>
           {advantages.map((advantage, index) => (
-            <Advantage key={index} {...advantage} offset={+index} />
+            <Advantage
+              data-aos="fade-left"
+              key={index}
+              {...advantage}
+              offset={+index}
+            />
           ))}
         </Container>
       </section>
-      <section id="services" className="mb-3">
+      <section id="services" className="mt-5 pt-5">
         <Container maxWidth="lg">
           <Typography className="text-center position-relative underlined text-uppercase mb-3">
             <span className="title text-underlined">HIZMATLARIMIZ</span>
@@ -52,7 +57,7 @@ export default function HomePage({ services, advantages }) {
           </Grid>
         </Container>
       </section>
-      <section id="partners" className="mb-5">
+      <section id="partners" className="my-5 pt-5">
         <Container maxWidth="lg">
           <Typography className="position-relative text-center mb-3">
             <span className="text-underlined title">HAMKORLARIMIZ</span>

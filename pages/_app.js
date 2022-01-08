@@ -5,6 +5,8 @@ import Footer from "../components/layout/Footer";
 import Navbar from "../components/layout/Navbar";
 import "../styles/index.scss";
 import Loader from "../components/common/Loader";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
@@ -14,6 +16,10 @@ function MyApp({ Component, pageProps }) {
     Router.events.on("routeChangeStart", () => setLoading(true));
     Router.events.on("routeChangeComplete", () => setLoading(false));
     Router.events.on("routeChangeError", () => setLoading(false));
+    AOS.init({
+      duration: 800,
+      delay: 200,
+    });
   }, []);
 
   return (
