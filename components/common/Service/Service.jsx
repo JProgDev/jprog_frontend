@@ -11,12 +11,16 @@ export const Service = ({ imgUrl, id, title, price, features, ...props }) => {
         <Avatar imgUrl={imgUrl} alt={title} />
       </div>
       <Typography className={classNames.title}>{title}</Typography>
-      <Typography className={classNames.price}>{price}</Typography>
-      <Typography
-        className={`${classNames.default} ${classNames["border-bottom"]}`}
-      >
-        dan boshlab
-      </Typography>
+      {price && (
+        <>
+          <Typography className={classNames.price}>{price}</Typography>
+          <Typography
+            className={`${classNames.default} ${classNames["border-bottom"]}`}
+          >
+            dan boshlab
+          </Typography>
+        </>
+      )}
       <div className={classNames.line}></div>
       <ul className={classNames.features}>
         {features &&

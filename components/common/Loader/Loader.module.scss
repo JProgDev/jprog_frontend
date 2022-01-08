@@ -1,0 +1,36 @@
+.loader {
+  position: absolute;
+  inset: 0;
+  position: fixed;
+  background-color: hsl(50%, 10%, 20%, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  font-size: 3rem;
+  color: rgb(102, 102, 102);
+}
+
+.text-block {
+  position: relative;
+}
+
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: white;
+  animation: loading-text 1s ease-in-out;
+}
+
+@keyframes loading-text {
+  0% {
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+  }
+  100% {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
